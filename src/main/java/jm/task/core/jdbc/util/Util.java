@@ -12,12 +12,13 @@ public class Util {
     private static final String PASSWORD = "Пароль";
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
 
-    public Connection getConnection() {
+    public  Connection getConnection() {
         Connection connect = null;
 
         try {
             Class.forName(DB_DRIVER);
             connect = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
+
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
