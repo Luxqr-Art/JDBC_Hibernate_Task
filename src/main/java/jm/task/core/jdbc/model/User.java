@@ -37,7 +37,7 @@ public class User {
         this.id = id;
     }
 
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
@@ -66,7 +66,7 @@ public class User {
         return "Футболист с ID = " + id +
                 ", Имя = " + name +
                 ", Фамилия = " + lastName +
-                ", Возраст = " + age ;
+                ", Возраст = " + age;
     }
 
 }

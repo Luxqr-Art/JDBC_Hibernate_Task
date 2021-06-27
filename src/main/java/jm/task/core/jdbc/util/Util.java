@@ -17,14 +17,14 @@ import java.util.Properties;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static final String USER_NAME = "root";
-    private static final String URL = "jdbc:mysql://localhost:3306/person?useSSL=false";
-    private static final String PASSWORD = "231196Popka";
+    private static final String USER_NAME = "Логин";
+    private static final String URL = "jdbc:mysql://localhost:3306/Имя базы?useSSL=true";
+    private static final String PASSWORD = "Пароль";
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
 
-    private  static SessionFactory sessionFactory;
+    private static SessionFactory sessionFactory;
 
-    public  Connection getConnection() {
+    public Connection getConnection() {
         Connection connect = null;
 
         try {
@@ -38,18 +38,17 @@ public class Util {
         return connect;
     }
 
-    public SessionFactory getSessionFactory(){
-        if (sessionFactory == null){
+    public SessionFactory getSessionFactory() {
+        if (sessionFactory == null) {
             try {
-                Configuration configuration  = new Configuration();
-                Properties settings =  new Properties();
+                Configuration configuration = new Configuration();
+                Properties settings = new Properties();
                 settings.put(Environment.DRIVER, DB_DRIVER);
                 settings.put(Environment.URL, URL);
                 settings.put(Environment.USER, USER_NAME);
                 settings.put(Environment.PASS, PASSWORD);
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-             //   settings.put(Environment.HBM2DDL_AUTO, "update");
-//                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
 //                settings.put(Environment.SHOW_SQL, "true");
 
                 configuration.setProperties(settings);
@@ -62,7 +61,7 @@ public class Util {
 
 
                 System.out.println("good connect");
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("проблема создание сессиии");
                 e.printStackTrace();
             }
