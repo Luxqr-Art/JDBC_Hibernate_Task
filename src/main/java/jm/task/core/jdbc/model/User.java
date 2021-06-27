@@ -65,7 +65,7 @@ public class User {
         return "Футболист с ID = " + id +
                 ", Имя = " + name +
                 ", Фамилия = " + lastName +
-                ", Возрост = " + age ;
+                ", Возраст = " + age ;
     }
 
 }
