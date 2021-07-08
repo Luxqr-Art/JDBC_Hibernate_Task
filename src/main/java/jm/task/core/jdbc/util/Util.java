@@ -17,9 +17,9 @@ import java.util.Properties;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static final String USER_NAME = "root";
-    private static final String URL = "jdbc:mysql://localhost:3306/person?useSSL=true";
-    private static final String PASSWORD = "231196Popka";
+    private static final String USER_NAME = "Пользователь";
+    private static final String URL = "jdbc:mysql://localhost:3306/Имя базы?useSSL=true";
+    private static final String PASSWORD = "Пароль";
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
 
     private static SessionFactory sessionFactory;
