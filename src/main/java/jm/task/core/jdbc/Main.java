@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
-        // реализуйте алгоритм здесь
+
         userService.createUsersTable();
 
         userService.saveUser("Криштиану", "Роналду", (byte) 36);
@@ -18,7 +18,7 @@ public class Main {
         userService.getAllUsers();
         System.out.println("<------------------------------------------------------------------->");
         userService.removeUserById(2);
-//        userService.getAllUsers();
+        userService.getAllUsers();
 
         userService.cleanUsersTable();
         userService.dropUsersTable();
